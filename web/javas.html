@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCC Computer Store</title>
+</head>
+<body>
+
+    <!-- Button to trigger the calculation -->
+    <button onclick="calculateTotalCost()">Calculate Total Cost</button>
+
+    <script>
+        function calculateTotalCost() {
+            // Prices of the items
+            const pricePC = 1200.00;
+            const priceMemoryCard = 70.00;
+            const priceDiskDrive = 128.50;
+
+            // Prompt the user for the number of items to purchase
+            let numberOfPCs = prompt("Enter the number of MCC-PCs to purchase:");
+            let numberOfMemoryCards = prompt("Enter the number of memory expansion cards to purchase:");
+            let numberOfDiskDrives = prompt("Enter the number of disk drives to purchase:");
+
+            // Convert the input to numbers
+            numberOfPCs = Number(numberOfPCs);
+            numberOfMemoryCards = Number(numberOfMemoryCards);
+            numberOfDiskDrives = Number(numberOfDiskDrives);
+
+            // Compute the cost for each item
+            let costPC = pricePC * numberOfPCs;
+            let costMemoryCards = priceMemoryCard * numberOfMemoryCards;
+            let costDiskDrives = priceDiskDrive * numberOfDiskDrives;
+
+            // Compute the total cost
+            let totalCost = costPC + costMemoryCards + costDiskDrives;
+
+            // Display the result
+            alert("Cost for MCC-PCs: RM " + costPC.toFixed(2) + "\n" +
+                  "Cost for Memory Expansion Cards: RM " + costMemoryCards.toFixed(2) + "\n" +
+                  "Cost for Disk Drives: RM " + costDiskDrives.toFixed(2) + "\n" +
+                  "Total Cost: RM " + totalCost.toFixed(2));
+        }
+    </script>
+
+</body>
+</html>
